@@ -1,18 +1,16 @@
-import './App.css'
-import {Profile, Login} from './components'
-import UserContextProvider from './context/UserContextProvider'
+import { useState } from "react";
+import "./App.css";
+import UserContextProvider from "./context/UserContextProvider";
+import Login from "./components/Login";
+import Profile from "./components/Profile";
 
 function App() {
-
   return (
-    <>
-      <UserContextProvider>
-        <h1>Charlie aur React</h1>
-        <Login />
-        <Profile />
-        </UserContextProvider>
-    </>
-  )
+    <UserContextProvider>
+      <h1>React with Chai and share is important</h1>
+      <Login /> <Profile />
+    </UserContextProvider>
+  );
 }
 
-export default App
+export default App;
